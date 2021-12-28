@@ -173,8 +173,10 @@ controlcenter:
   ## C3 External Access
   ##
   loadBalancer:
-    enabled: false
+    enabled: true
+    type: external
     domain: ""
+    prefix: "controlcenter"
   ##
   ## TLS configuration
   ##
