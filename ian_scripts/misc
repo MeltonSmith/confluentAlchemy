@@ -1,5 +1,8 @@
 kubectl port-forward svc/controlcenter 9021:9021 -n operator
 kubectl port-forward connectors-0 7778:7778 -n operator
+kubectl port-forward prometheus-server-57c67b7dc9-nkwnx 9090:9090
+
+OR
 
 helm install my-ingress  stable/nginx-ingress -n operator \
   --set controller.ingressClass=kafka \
