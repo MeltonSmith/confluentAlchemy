@@ -67,12 +67,6 @@ rules:
     labels:
       connector: $1
       status: $2
-
-  # kafka.connect:type=connector-metrics
-#  - pattern: "kafka.connect<type=connector-metrics><>([^:]+)"
-#    name: kafka_connect_connector_metrics_$1
-#    labels:
-#      connector: "aggregate"
   # kafka.connect:type=*-task-metrics,*
   # kafka.connect:type=source-task-metrics,connector=*,task=*
   # kafka.connect:type=sink-task-metrics,connector=*,task=*
