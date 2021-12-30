@@ -61,14 +61,13 @@ rules:
     name: kafka_connect_connect_worker_metrics_$2
     labels:
       connector: $1
-  # kafka.connect:type=connector-metrics,connector=*
-  - pattern: "kafka.connect<type=connector-metrics, connector=(.+)><>(.+): (.+)"
+  - pattern: "kafka.connect<type=connector-metrics, connector=(.+)><>status: (.+)"
+    name: kafka_connect_connector_status
     value: 1
-    name: kafka_connect_connector_metrics
     labels:
       connector: $1
-      $2: $3
-    type: UNTYPED
+      status: $2
+
   # kafka.connect:type=connector-metrics
 #  - pattern: "kafka.connect<type=connector-metrics><>([^:]+)"
 #    name: kafka_connect_connector_metrics_$1
