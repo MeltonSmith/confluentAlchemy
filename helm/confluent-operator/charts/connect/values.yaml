@@ -12,6 +12,7 @@ replicas: 3
 ##
 image:
   repository: cp-kafka-connect-custom-ian-template
+#  tag: 1.1.0-old544
   tag: 1.0.1
   pullPolicy: IfNotPresent
 ## Pod resources configuration
