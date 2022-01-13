@@ -55,12 +55,6 @@ rules:
     name: kafka_connect_connect_worker_metrics_$1
     labels:
       connector: "aggregate"
-  #       TODO
-  # kafka.connect:type=connect-worker-metrics,connector=*
-  - pattern: "kafka.connect<type=connector-metrics, connector=(.+)><>([^:]+)"
-    name: kafka_connect_connector_metrics_$2
-    labels:
-      connector: $1
   # kafka.connect:type=connect-worker-metrics,connector=*
   - pattern: "kafka.connect<type=connect-worker-metrics, connector=(.+)><>([^:]+)"
     name: kafka_connect_connect_worker_metrics_$2

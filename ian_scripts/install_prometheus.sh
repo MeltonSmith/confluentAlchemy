@@ -4,5 +4,5 @@ helm upgrade --install \
   --namespace default \
   --set alertmanager.enabled=false \
   --set nodeExporter.enabled=false \
-  --set server.global.scrape_timeout=1m
-#  --set server.service.type="NodePort"
+  --set server.global.scrape_timeout=1m \
+  --set server.service.type="NodePort"
