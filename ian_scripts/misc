@@ -1,11 +1,10 @@
 kubectl port-forward svc/controlcenter 9021:9021 -n operator -- web face
-kubectl port-forward connectors-0 7778:7778 -n operator
-kubectl port-forward connectors-0 7203:7203 -n operator -- jmx port
-kubectl port-forward connectors-0 7777:7777 -n operator -- jolokia port
-kubectl port-forward prometheus-server-57c67b7dc9-nkwnx 9090:9090 -- web face
-
 OR
-
 helm install my-ingress  stable/nginx-ingress -n operator \
   --set controller.ingressClass=kafka \
   --set tcp.9021="operator/controlcenter:9021" \
+
+kubectl port-forward connectors-0 7778:7778 -n operator -- for pod extracted metrics
+kubectl port-forward connectors-0 7203:7203 -n operator -- jmx port
+kubectl port-forward connectors-0 7777:7777 -n operator -- jolokia port
+kubectl port-forward prometheus-server-57c67b7dc9-nkwnx 9090:9090 -- web face

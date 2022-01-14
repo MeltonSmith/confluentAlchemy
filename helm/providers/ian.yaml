@@ -59,6 +59,9 @@ kafka:
 ##
 connect:
   name: connectors
+  image:
+    repository: cp-kafka-connect-custom-ian-template
+    tag: 6.0.0.0
   replicas: 1
   tls:
     enabled: false

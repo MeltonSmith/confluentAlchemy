@@ -11,10 +11,7 @@ replicas: 3
 ## Image information
 ##
 image:
-#  repository: cp-kafka-connect-custom-ian-template
-  #  tag: 5.4.0
   repository: confluentinc/cp-server-connect-operator
-#  repository: cp-kafka-connect-custom-ian-template
   tag: 6.0.0.0
   pullPolicy: IfNotPresent
 ## Pod resources configuration
